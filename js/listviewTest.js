@@ -10,6 +10,8 @@ import {
     TextInput,
     ListView,
     Image,
+    Navigator,
+    TouchableHighlight,
     TouchableOpacity,
 } from 'react-native';
 
@@ -32,6 +34,7 @@ var THUMB_URLS = [
 
 
 
+import DetailsView from './ListViewDetails.js';
 export default class listviewTest extends Component {
 
     constructor(props) {
@@ -40,30 +43,30 @@ export default class listviewTest extends Component {
         this.state = {
             dataSource: ds.cloneWithRows(['row 1', 'row 2','row 3','row 4','row 5','row 6','row 7','row 8','row 9','row 10','row 11','row 12']),
         };
-        this._onclick=this._onclick().bind(this);
-
     }
     _onclick(){
-        Alert("I am an alert box!!");
-        const { navigator } = this.props;
+        const {navigator} = this.props;
         navigator.push({
-            screen: require('./js/ListViewDetails.js'),
-            props: {
-                bigTitle:'测试一下',
-                title:'测试',
-                url:THUMB_URLS[0],
-            }
+            name : 'DetailsView' ,
+            component : DetailsView
         });
+            // this.props.navigator.push({
+            //     screen: require('./ListViewDetails.js'),
+            //     props: {
+            //         bigTitle:'测试一下',
+            //         title:'测试',
+            //         url:THUMB_URLS[0],
+            //     }
+            // });
     }
 
-    _fasf(){
-        alert('fajfldsjafladsjlfjadsfj');
-    }
 
     _renderRow(rowData: string, sectionID: number, rowID: number) {
         var imgSource = THUMB_URLS[rowID];
         return (
-            <TouchableOpacity onPress={()=>this._fasf(this)}>
+            <TouchableHighlight
+                onPress={() => this._onclick()}
+                underlayColor='#c8c7cc'>
                 <View>
                     <View style={styles.row}>
                         <Image style={styles.thumb} source={imgSource} />
@@ -72,7 +75,7 @@ export default class listviewTest extends Component {
                         </Text>
                     </View>
                 </View>
-            </TouchableOpacity>
+            </TouchableHighlight>
         );
     }
 
@@ -98,4 +101,5 @@ const styles = StyleSheet.create({
         height: 50,
     },
 });
+
 

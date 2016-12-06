@@ -8,87 +8,39 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
-    Navigator,
+  Navigator,
   ToastAndroid,
   Text,
-    Image,
-    TouchableHighlight,
+  Image,
+  TouchableHighlight,
   View, TouchableOpacity, TextInput,
-    ListView
+  ListView
 } from 'react-native';
 
-import MainScreen from './listviewTest';
-class RNHelloWorld extends Component {
+import MainScreen from './js/HomePageView';
+ class RNHelloWorld extends Component {
     constructor(props) {
         super(props);
     }
-
-  // render() {
-  //   return (
-  //       <View style={{flex: 1, flexDirection: 'column'}}>
-  //         <View style={{padding:10}}>
-  //
-  //         <TextInput style={{height:40}}
-  //                    please="hello wrold"
-  //                    returnKeyType='next'
-  //                    placeholder="请输入搜索的内容"
-  //
-  //                    onChangeText={(text)=>this.setState({text})}
-  //         />
-  //       </View>
-  //
-  //
-  //
-  //
-  //       <View style={{flex: 1, flexDirection: 'row',justifyContent:'center' } }>
-  //         <View style={{width: 50, height: 50, backgroundColor: 'powderblue',flex:1}} />
-  //         <View style={{width: 50, height: 50, backgroundColor: 'skyblue',flex:2}} />
-  //         <View style={{width: 50, height: 50, backgroundColor: 'steelblue',flex:3}} />
-  //       </View>
-  //
-  //
-  //       <View style={{flex: 1, flexDirection: 'row',justifyContent:'center' } }>
-  //       <TouchableOpacity >
-  //         <Image
-  //             style={styles.instructions}
-  //             source={require('./icon/ic_launcher.png')}
-  //         />
-  //      </TouchableOpacity>
-  //         <TouchableHighlight onPress={this._onPressButton}
-  //                             activeOpacity="0">
-  //           <Image
-  //               style={styles.instructions}
-  //               source={require('./icon/ic_launcher.png')}
-  //           />
-  //         </TouchableHighlight>
-  //       </View>
-  //       </View>
-  //   );
-  // }
     renderScene(route, navigator) {
         return <route.component navigator={navigator}  {...route.passProps} />;
     }
+    configureScene(route, routeStack) {
+        if (route.type == 'Bottom') {
+            return Navigator.SceneConfigs.FloatFromBottom; // 底部弹出
+        }
+        return Navigator.SceneConfigs.PushFromRight; // 右侧弹出
+    }
+
     render() {
         return (
-            // <Navigator
-            //    style={{flex:1}}
-            //    initialRoute={{component: listviewTest}}
-            //    renderScene={this.renderScene}/>
             <Navigator
-                initialRoute={{name: 'main', index: 0, id:'main'}}
-                renderScene={(route, navigator) => RNHelloWorld._renderPage(route,navigator)}
+                initialRoute={{component: MainScreen}}
+                configureScene={this.configureScene}
+                renderScene={this.renderScene}
             />
       );
-
     }
-    static _renderPage(route, nav) {
-        switch (route.id) {
-            case 'main':
-                return (<MainScreen nav={nav}/>);
-                break;
-        }
-    }
-
 }
 
 const styles = StyleSheet.create({

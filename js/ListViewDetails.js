@@ -2,28 +2,29 @@
  * Created by zhf on 16/12/1.
  */
 "use static"
-var React = require('react-native'); // 引用React库
-var {
-    Component,
-    }=React;
-
-class ListViewDetails extends Component{
+import React, { Component } from 'react';
+import  {
+    Text,
+    View,
+    Image,
+    StyleSheet,
+    ScrollView,
+    Navigator,
+    TouchableHighlight,
+}from 'react-native';
+export default class ListViewDetails extends Component{
     constructor(props){
         super(props)
 
     }
     render(){
         return(
-            <ScrollView>
                 <View style={styles.viewStyle}>
-                     <View style={styles.viewStyle}>
-                         <image style={{flex:1}} source={'../icon/ic_launcher'}></image>
-                         <Text style={{flex:2}}>测试一下</Text>
+                     <View style={styles.viewStyle} >
+                         <Image  source={require('../icon/ic_launcher.png')}/>
+                         <Text>测试下</Text>
                      </View>
-
-
                 </View>
-            </ScrollView>
         );
     }
 
@@ -32,6 +33,8 @@ class ListViewDetails extends Component{
 const styles=StyleSheet.create({
     viewStyle:{
         flex:1,
+        alignItems: 'center',
+        flexDirection: 'column',
         backgroundColor:'white'
     },
 
