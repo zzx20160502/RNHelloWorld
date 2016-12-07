@@ -17,7 +17,7 @@ import {
   ListView
 } from 'react-native';
 
-import MainScreen from './js/HomePageView';
+import MainScreen from './js/login/LoginView.js';
  class RNHelloWorld extends Component {
     constructor(props) {
         super(props);
