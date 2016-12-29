@@ -25,6 +25,7 @@ class HomePageItem extends  Component{
                     <Image  source={require('../icon/ic_launcher.png')}/>
                     <Text>测试下</Text>
                 </View>
+                <view></view>
 
             </View>
         );

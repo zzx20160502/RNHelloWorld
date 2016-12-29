@@ -49,5 +49,6 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+import Root from './src/root';
 
-AppRegistry.registerComponent('RNHelloWorld', () => RNHelloWorld);
+AppRegistry.registerComponent('RNHelloWorld', () => Root);

@@ -9,14 +9,10 @@ import {
   AppRegistry,
   StyleSheet,
   Navigator,
-  ToastAndroid,
-  Text,
-  Image,
-  TouchableHighlight,
-  View, TouchableOpacity, TextInput,
-  ListView
+
 } from 'react-native';
 
+import Root from './src/root';
 import MainScreen from './js/login/LoginView.js';
  class RNHelloWorld extends Component {
     constructor(props) {
@@ -62,4 +58,5 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('RNHelloWorld', () => RNHelloWorld);
+// AppRegistry.registerComponent('RNHelloWorld', () => RNHelloWorld);
+AppRegistry.registerComponent('RNHelloWorld', () => Root);
