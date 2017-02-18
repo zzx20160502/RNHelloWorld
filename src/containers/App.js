@@ -10,24 +10,27 @@ import {
 } from 'react-native';
 
 import MainTabsView from './MainTabsView';
-import EditView from './EditView';
-import BroswerView from './BroswerView';
+import Shopping from './shop/Shopping';
+import ShoppingDetailsView from './mall/ShoppingDetailsView'
+import WebView from '../WebView'
 
-const ROUTES = {MainTabsView, EditView, BroswerView};
+const ROUTES = {MainTabsView, Shopping,WebView,ShoppingDetailsView};
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.renderScene = this.renderScene.bind(this);
+        this.configureScene = this.configureScene.bind(this);
+    }
+
     renderScene = (route, navigator) => {
         let Scene = ROUTES[route.name];
         return <Scene {...route} navigator={navigator}/>;
     }
-    configureScene = (route,routeStack)=>{
-        switch (route.name){
-            case 'EditView':
-                return Navigator.SceneConfigs.FloatFromBottom;
-            default:
-                return Navigator.SceneConfigs.PushFromRight;
-        }
+    configureScene = (route, routeStack) => {
+        return Navigator.SceneConfigs.PushFromRight;
     }
+
     render() {
         return (
             <View style={styles.container}>

@@ -1,0 +1,104 @@
+/**
+ * Created by zhf on 17/1/9.
+ */
+
+{
+    "banners": [
+    {
+        "name": "一元中大奖",
+        "desc": "欧风环保编织汽车脚垫",
+        "product_id": "5618f01d773b442d4c000000",
+        "link": "http://m.lmoar.com:8080/wap/prize_activity",
+        "action_type": 1,
+        "is_service": false,
+        "picture": "/uploads/picture/20160429/picture/5722fde9773b446f6f000019/app_c46bd8896abb0762b0128cd3482ca129.png"
+    }
+],
+    "products": [
+    {
+        "name": "Q3原厂踏板（亮）",
+        "brief": "",
+        "brand": "",
+        "price": 1950,
+        "ori_price": null,
+        "buy_tips": "",
+        "product_id": "563c85cc773b442c52000046",
+        "photo": "/uploads/product/20151106/563c85cc773b442b6f000010_middle.png"
+    },
+    {
+        "name": "Q3原厂踏板（暗）",
+        "brief": "",
+        "brand": "",
+        "price": 1950,
+        "ori_price": null,
+        "buy_tips": "",
+        "product_id": "563c85c2773b442c5200001a",
+        "photo": "/uploads/product/20151106/563c85c2773b442b6f000006_middle.png"
+    },
+    {
+        "name": "路虎极光耀动耀致公路款踏板",
+        "brief": "",
+        "brand": "",
+        "price": 1600,
+        "ori_price": null,
+        "buy_tips": "",
+        "product_id": "563c85e4773b442c52000097",
+        "photo": "/uploads/product/20151106/563c85e4773b442b6c00000e_middle.png"
+    },
+    {
+        "name": "宝马X5踏板",
+        "brief": "",
+        "brand": "",
+        "price": 1580,
+        "ori_price": null,
+        "buy_tips": "",
+        "product_id": "563c85e6773b442c520000a1",
+        "photo": "/uploads/product/20151106/563c85e6773b442b73000013_middle.png"
+    }
+],
+    "promotion_products": [
+    {
+        "name": "内饰改装",
+        "product_group_id": "5618f3c4773b442d51000006",
+        "photo": "/uploads/picture/20160518/picture/573c3f0891f22124cd0000f5/app_393809f6da5d71d6ebca8e001ee7de78.jpg"
+    },
+    {
+        "name": "优惠专区",
+        "product_group_id": "5618f55d773b442d4c000007",
+        "photo": "/uploads/picture/20161107/picture/5820270391f22110a759dc51/app_89aa492298ee36dd3f58442c407fcfd6.jpeg"
+    }
+],
+    "service_categories": [
+    {
+        "name": "洗车",
+        "brief": "",
+        "category_id": "574e4fb891f2212cf10000ae",
+        "photo": "/uploads/picture/20160613/picture/575e50cb91f2216d81000047/app_16a9734701ed9b8228e06f1ac523d3e8.png"
+    },
+    {
+        "name": "精洗",
+        "brief": "",
+        "category_id": "574e4fd591f2212cf10000b0",
+        "photo": "/uploads/picture/20160613/picture/575e546b91f2216d81000048/app_55579e4e0634e3529cc01f3536db87ca.png"
+    }
+],
+    "product_categories": [
+    {
+        "name": "脚垫",
+        "brief": "高级脚垫",
+        "category_id": "5618e609773b442947000001",
+        "photo": "/uploads/picture/20151010/picture/5618e603773b442947000000/app_da1265e2e15d23fe94b6ab2e39ce3cba.png"
+    },
+    {
+        "name": "脚踏板",
+        "brief": "刹车踏板",
+        "category_id": "5618e636773b442949000000",
+        "photo": "/uploads/picture/20160114/picture/5697571d773b44435e000004/app_83cd9f3d2fd7ca40b021b31ce47baf18.png"
+    }
+],
+    "result_code": 1,
+    "version_no": "",
+    "is_need_update": false,
+    "url": "",
+    "info": ""
+}

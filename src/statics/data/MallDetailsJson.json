@@ -1,0 +1,21 @@
+/**
+ * Created by zhf on 17/1/10.
+ */
+{
+  "product": {
+    "name": "11-14款途锐电动踏板",
+    "brief": "新款途锐电动踏板 辉途致信途锐电动踏板",
+    "brand": "JPP",
+    "price": 8800,
+    "ori_price": 8800,
+    "buy_tips": "",
+    "sell_count": 1,
+    "has_warranty": true,
+    "has_invoice": true,
+    "newprepay": true,
+    "freight_payer": 1,
+    "product_id": "5616145b773b446a54000001",
+    "favorite": false,
+    "photo": "/uploads/product/20151030/563323b3773b4435d2000003_thumb.png"
+  }
+}

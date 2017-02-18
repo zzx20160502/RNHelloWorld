@@ -5,8 +5,9 @@
 import { combineReducers } from 'redux';
 import navigation from './navigation';
 import todos from './todos';
+import mall from './mall';
 const rootReducer = combineReducers({
-    navigation, todos
+    navigation, todos,mall,
 });
 
 export default rootReducer;

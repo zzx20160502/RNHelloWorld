@@ -11,8 +11,8 @@ import {
 } from 'react-native';
 // import HomeView from './HomeView';
 import HomeViewIndex from  './homePage/HomePageIndex';
-import CompletedView from './CompletedView';
-import BroswerView from './BroswerView';
+import Shopping from './shop/Shopping';
+import MallMain from './mall/MallMainView'
 import {Main} from '../components/main-tabs-view';
 
 import Actions from '../actions';
@@ -24,9 +24,9 @@ class MainTabsView extends Component {
       case 0:
         return <HomeViewIndex navigator={navigator}/>;
       case 1:
-        return <CompletedView navigator={navigator}/>;
+        return <Shopping navigator={navigator}/>;
       case 2:
-        return <BroswerView url="https://unbug.gitbooks.io/react-native-training/content/" title="React Native Training"/>;
+        return <MallMain navigator={navigator}/>;
       default:
         return null;
     }

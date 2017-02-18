@@ -36,7 +36,7 @@ class SwiperView extends Component {
         var itemArr = [];
         for (var i = 0; i <= 10; i++) {
             itemArr.push(
-                    <View style={styles.slide} title={<Text numberOfLines={1}>Learn from Kim K to land that job</Text>}>
+                    <View style={styles.slide} >
                         <Image resizeMode='stretch' style={styles.image} source={require('./img/4.jpg')}/>
                     </View>
             )

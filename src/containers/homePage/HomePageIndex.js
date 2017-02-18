@@ -32,6 +32,7 @@ var homePageSource = [];
 let dic = [];
 
 
+
 class HomePageIndex extends Component {
 
     constructor(props) {
@@ -78,19 +79,13 @@ class HomePageIndex extends Component {
 
 
     render() {
-        // alert(this.state.homePageSource.getRowCount());
         return (
             <View style={{flex:1,flexDirection:'column',backgroundColor: '#f9f9f9'}}>
-                <Header style={styles.homepagetitle} title="消息中心"/>
+                <Header style={styles.homepagetitle} title="理财" navigator={this.props}/>
                 <ScrollView style={{width: ScreenWidth,height: ScreenHeight}}>
 
                     <View style={{flex:1,flexDirection: 'column'}}>
-
-
-                        {/*<TouchableOpacity onPress={this._adverOnclck.bind(this)}>*/}
                         <Swiper/>
-                        {/*</TouchableOpacity>*/}
-
                         {this._checkData()}
                     </View>
                 </ScrollView>
@@ -99,9 +94,10 @@ class HomePageIndex extends Component {
 
     }
 
+
     _checkData() {
         if (this.state.homePageSource.getRowCount() == 0 && this.state.homePageSource) {
-            let tips = '暂无信息';
+            let tips = '暂无数据';
             return (
                 <View >
                     <Text style={{fontSize: 16,color: '#878787',marginTop: 30}}>{tips}</Text>
@@ -118,7 +114,7 @@ class HomePageIndex extends Component {
     }
 
     _itemOnclick() {
-        alert('暂不能跳转');
+        this.props.navigator.push({name: 'HomePageDetails'});
     }
 
     _renderRow(list, sectionID, rowID) {
@@ -204,7 +200,7 @@ const styles = StyleSheet.create({
             alignItems: 'center',
             backgroundColor: 'rgb(58,158,252)',
             borderColor: 'rgb(58,158,252)',
-            borderRadius: 5,
+            borderRadius: (Platform.OS === 'ios' ? 5 : 5),
             borderWidth: (Platform.OS === 'ios' ? 1.0 : 1.5) / PixelRatio.get(),
         },
         btnDefaultStyle2: {
